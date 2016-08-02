@@ -3,7 +3,6 @@
 
 namespace yart {
 	bool PPm::readPpm(const std::string & xpath) {
-		//
 		std::ifstream fin(xpath);
 		if (!fin.is_open()) return false;
 		std::string x;
@@ -13,8 +12,8 @@ namespace yart {
 			fin.close();
 			return false;
 		} 
-		std::getline(fin, x);
-		std::getline(fin, x);
+		fin >> x; 
+		std::getline(fin, x); //getline can't get throgh the newline char
 		fin >> this->width >> this->height;
 		fin >> this->maxval;
 		assert(this->width > 0 && this->height > 0);
@@ -46,7 +45,7 @@ namespace yart {
 		os << ppm.maxval << std::endl;
 		for (int i = 0; i < ppm.height; ++i) {
 			for (int j = 0; j < ppm.width; ++j) {
-				os << ppm.data[cnt++] << std::endl;
+				os << ppm.data[cnt++] << " " << ppm.data[cnt++] << " " << ppm.data[cnt++] << std::endl;
 			}
 		}
 		return os;
