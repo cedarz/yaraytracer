@@ -27,6 +27,7 @@ namespace yart {
 				fin >> data[cnt++];
 			}
 		}
+		fin.close();
 		if (cnt == width * height * 3) return true;
 		else {
 			delete data;
@@ -34,8 +35,22 @@ namespace yart {
 		}
 	}
 
-	bool PPm::writePpm() {
-		//
+	//write to a .ppm
+	bool PPm::writePpm(const std::string & xpath) {
+		std::ofstream fout(xpath);
+		if (!fout.is_open()) {
+			return false;
+		}
+		fout << "P3" << std::endl;
+		fout << "# " << xpath << std::endl;
+		fout << width << " " << height << std::endl;
+		fout << maxval << std::endl;
+		int cnt = 0;
+		for (int i = 0; i < height; ++i) {
+			for (int j = 0; j < width; ++j) {
+				fout << data[cnt++] << " " << data[cnt++] << " " << data[cnt++] << std::endl;
+			}
+		}
 		return true;
 	}
 
