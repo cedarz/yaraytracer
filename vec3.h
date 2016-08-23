@@ -1,4 +1,5 @@
 // linear algebra data structures and operations
+// vec3
 
 #ifndef _MATH_H_
 #define _MATH_H_

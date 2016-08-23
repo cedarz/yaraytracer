@@ -14,8 +14,8 @@ namespace yart{
 		PPm() : data(NULL) {}
 		PPm(std::string & p, int mv, int w, int h) : path(p), maxval(mv),
 			width(w), height(h), data(NULL) {}
-		bool readPpm(const std::string & xpath);
-		bool writePpm(const std::string & xpath);
+		bool read_ppm(const std::string & xpath);
+		bool write_ppm(const std::string & xpath);
 
 		~PPm() {
 			if (data) delete data;

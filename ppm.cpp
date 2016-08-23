@@ -2,7 +2,7 @@
 #include "ppm.h"
 
 namespace yart {
-	bool PPm::readPpm(const std::string & xpath) {
+	bool PPm::read_ppm(const std::string & xpath) {
 		std::ifstream fin(xpath);
 		if (!fin.is_open()) return false;
 		std::string x;
@@ -12,7 +12,7 @@ namespace yart {
 			fin.close();
 			return false;
 		} 
-		fin >> x; 
+		//fin >> x; 
 		std::getline(fin, x); //getline can't get through the newline char '\n'
 		fin >> this->width >> this->height;
 		fin >> this->maxval;
@@ -36,7 +36,7 @@ namespace yart {
 	}
 
 	//write to a .ppm
-	bool PPm::writePpm(const std::string & xpath) {
+	bool PPm::write_ppm(const std::string & xpath) {
 		std::ofstream fout(xpath);
 		if (!fout.is_open()) {
 			return false;

@@ -7,7 +7,7 @@ int main() {
 	std::cout << x << std::endl;
 
 	yart::PPm ppm;
-	ppm.readPpm("D:/zxs/ray-tracer/yart/yart/output.ppm");
+	ppm.read_ppm("D:/zxs/ray-tracer/yart/yart/output.ppm");
 	std::cout << ppm << std::endl;
 	std::cin.get();
 	return 0;
