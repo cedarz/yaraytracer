@@ -14,9 +14,21 @@ namespace yart {
 		float xres, yres; // x and y resolution
 	};
 
-	struct sphere {
-
+	/// let the center be at the origin, unit radius
+	struct Sphere {
+		// material properity
+		// 4x4 transform matrix
+		yart::vec3 origin; 
+		float radius;
 	};
+
+	struct Light {
+		yart::vec3 position;
+		float intensity;
+		float falloff;
+	};
+
+
 }
 
 #endif /*endf of _SCENE_H_*/
