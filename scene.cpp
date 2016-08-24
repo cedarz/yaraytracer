@@ -63,6 +63,10 @@ void yart::Scene::parse_scene(std::string const & scene_path) {
 			ss >> file_name;
 		}
 
+		if (command == "identity") {
+
+		}
+
 
 	}
 

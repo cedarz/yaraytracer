@@ -12,7 +12,7 @@ namespace yart {
 			fin.close();
 			return false;
 		} 
-		//fin >> x; 
+		fin >> x; 
 		std::getline(fin, x); //getline can't get through the newline char '\n'
 		fin >> this->width >> this->height;
 		fin >> this->maxval;

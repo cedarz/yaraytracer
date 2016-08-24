@@ -1,6 +1,7 @@
 #include <iostream>
 #include "vec3.h"
 #include "ppm.h"
+#include "matrix.h"
 
 int main() {
 	yart::vec3 x(1.1f);
@@ -8,7 +9,12 @@ int main() {
 
 	yart::PPm ppm;
 	ppm.read_ppm("D:/zxs/ray-tracer/yart/yart/output.ppm");
-	std::cout << ppm << std::endl;
+	//std::cout << ppm << std::endl;
+	yart::Matrix<float> mat;
+
+	std::cout << mat << std::endl;
+	yart::fun();
+
 	std::cin.get();
 	return 0;
 }
