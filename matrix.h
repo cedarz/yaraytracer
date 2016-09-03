@@ -32,7 +32,7 @@ namespace yart {
 		Matrix(T * _m) {
 			assert(_m);
 			if (_m) {
-				memcpy(m, _m, 16);
+				memcpy(m, _m, 16 * sizeof(T));
 			}
 		}
 
@@ -65,6 +65,15 @@ namespace yart {
 		}
 		return os;
 	}
+
+	template<typename T>
+	Matrix<T> Matrix<T>::Identity;
+
+	template<typename T>
+	Matrix<T> Matrix<T>::Zero(static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0),
+		static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0),
+		static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0),
+		static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0));
 }
 
 #endif

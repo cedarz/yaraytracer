@@ -12,7 +12,7 @@ int main() {
 	//std::cout << ppm << std::endl;
 	yart::Matrix<float> mat;
 
-	std::cout << mat << std::endl;
+	std::cout << yart::Matrix<float>::Identity << std::endl;
 	yart::fun();
 
 	std::cin.get();
