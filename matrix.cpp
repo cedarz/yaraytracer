@@ -2,12 +2,16 @@
 #include <iostream>
 
 namespace yart {
-	template <typename T>
-	std::ostream & operator<< (std::ostream & os, yart::Matrix<T> const & mat) {
-		os << "hello, matrix";
-		return os;
-	}
+	template<T>
+	Matrix::Identity;
+
+	template<T>
+	Matrix::Zero(static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0),
+		static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0),
+		static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0),
+		static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0), static_cast<T>(0.0));
 }
+
 
 namespace yart{
 	void fun() {
