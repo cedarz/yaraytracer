@@ -2,6 +2,7 @@
 #ifndef _SCENE_H_
 #define _SCENE_H_
 #include "vec3.h"
+#include "matrix.h"
 #include <vector>
 
 namespace yart {
@@ -47,6 +48,7 @@ namespace yart {
 		std::vector<yart::Light> lights;
 		yart::vec3 background_color;
 		float ambient;
+		yart::mat4 mat;
 
 	public:
 		Scene();

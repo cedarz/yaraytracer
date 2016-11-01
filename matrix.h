@@ -51,6 +51,8 @@ namespace yart {
 
 	
 	void fun();
+
+	typedef yart::Matrix<float> mat4;
 }
 
 namespace yart {
