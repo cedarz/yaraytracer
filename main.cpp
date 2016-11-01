@@ -9,10 +9,13 @@ int main() {
 
 	yart::PPm ppm;
 	ppm.read_ppm("D:/zxs/ray-tracer/yart/yart/output.ppm");
-	//std::cout << ppm << std::endl;
+	std::cout << ppm << std::endl;
 	yart::Matrix<float> mat;
 
 	std::cout << yart::Matrix<float>::Identity << std::endl;
+
+	yart::mat4 m = yart::Matrix<float>::Zero;
+	std::cout << m << std::endl;
 	yart::fun();
 
 	std::cin.get();
